@@ -15,24 +15,22 @@
 
     <!-- Declarative React code -->
     <script type="text/jsx">
-        const domNode = document.getElementById('app');
-        const root = ReactDOM.createRoot(domNode);
-        root.render(<h1>Develop. Preview. Ship.🚀</h1>);
+        const app = document.getElementById('app');
+
+
+        function Header() {
+            return <div>Develop. Preview. Ship.</div>;
+        }
+
+        function HomePage() {
+            return (
+                <div>
+                    <Header />
+                </div>
+            )
+        }
+        const root = ReactDOM.createRoot(app);
+        root.render(<HomePage />);
     </script>
   </body>
 </html>
-
-
-
-
-
-
-<!-- Imperative JavaScript-->
-<!-- <script type="text/javascript">
-  const app = document.getElementById('app');
-  const header = document.createElement('h1');
-  const text = 'Develop. Preview. Ship.';
-  const headerContent = document.createTextNode(text);
-  header.appendChild(headerContent);
-  app.appendChild(header);
-</script> -->
