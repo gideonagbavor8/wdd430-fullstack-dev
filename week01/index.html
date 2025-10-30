@@ -7,22 +7,32 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript">
-        // Select the div element with id 'app'
-        const app = document.getElementById('app');
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-        // Create a new h1 element
-        const header = document.createElement('h1');
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        // Create a new text node for the h1 element
-        const text = 'Develop. Preview. Ship.🚀';
-        const headerContent = document.createTextNode(text);
-
-        // Append the text node to the h1 element
-        header.appendChild(headerContent);
-
-        // Place the h1 element inside the div
-        app.appendChild(header);
+    <!-- Declarative React code -->
+    <script type="text/jsx">
+        const domNode = document.getElementById('app');
+        const root = ReactDOM.createRoot(domNode);
+        root.render(<h1>Develop. Preview. Ship.🚀</h1>);
     </script>
   </body>
 </html>
+
+
+
+
+
+
+<!-- Imperative JavaScript-->
+<!-- <script type="text/javascript">
+  const app = document.getElementById('app');
+  const header = document.createElement('h1');
+  const text = 'Develop. Preview. Ship.';
+  const headerContent = document.createTextNode(text);
+  header.appendChild(headerContent);
+  app.appendChild(header);
+</script> -->
