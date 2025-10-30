@@ -18,17 +18,26 @@
         const app = document.getElementById('app');
 
 
-        function Header() {
-            return <div>Develop. Preview. Ship.</div>;
-        }
-
         function HomePage() {
+            const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
             return (
                 <div>
-                    <Header />
+                    <Header title="Develop. Preview. Ship." />
+                    <ul>
+                        {names.map((name) => (
+                            <li key={name}>{name}</li>
+                        ))}
+                    </ul>
                 </div>
             )
         }
+
+        function Header({title}) {
+            <!-- console.log(title); -->
+            return <h1>{`Cool ${title}`}</h1>;
+        }
+
+        
         const root = ReactDOM.createRoot(app);
         root.render(<HomePage />);
     </script>
